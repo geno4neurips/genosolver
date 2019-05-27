@@ -1,0 +1,12 @@
+*
+!*/
+!*.py
+!*.hpp
+!*.cpp
+!*.pxd
+!*.pyx
+!.gitignore
+!*.md
+eigen
+build
+genointerface.cpp
