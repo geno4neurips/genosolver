@@ -3,6 +3,7 @@
 !__init__.py
 !.gitignore
 !README.md
+!requirements.txt
 !setup.py
 !augmentedLagrangian.cpp
 !augmentedLagrangian.hpp

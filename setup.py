@@ -51,6 +51,8 @@ setup(name="genosolver",
       packages=find_packages(),
       ext_modules=cythonize(ext))
 
+os.remove("genosolver/genointerface.cpp")
+
 
 # # from distutils.core import setup, Extension
 # from setuptools import setup, Extension, find_packages

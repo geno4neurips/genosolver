@@ -1,0 +1,4 @@
+numpy
+wget
+cython
+scipy
