@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import warnings
-import genointerface
+import genosolver.genointerface as genointerface
 from scipy.optimize import OptimizeResult
 import numpy as np
 from timeit import default_timer
