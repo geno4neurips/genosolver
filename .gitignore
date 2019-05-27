@@ -1,3 +1,5 @@
+*
+!*/
 !__init__.py
 !.gitignore
 !README.md
@@ -16,3 +18,5 @@
 !pygenointerface.hpp
 !pygenonlp.cpp
 !pygenonlp.hpp
+build
+eigen
