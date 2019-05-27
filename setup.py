@@ -1,11 +1,14 @@
-from distutils.core import setup, Extension
+# from distutils.core import setup, Extension
+from setuptools import setup, Extension, find_packages
 from Cython.Build import cythonize
 import numpy as np
-import distutils.sysconfig
-import platform
+import os
+
+# import distutils.sysconfig
+# import platform
 
 # eigenIncludeDir = "../eigen-eigen-5a0156e40feb"
-eigenIncludeDir = "eigen"
+dir_eigen_inc = os.path.join("genosolver", "eigen")
 # compilerFlags = "-std=c++11"
 
 # cfg_vars = distutils.sysconfig.get_config_vars()
@@ -15,18 +18,19 @@ eigenIncludeDir = "eigen"
 
 
 ext = Extension("genointerface",
-                sources=["genointerface.pyx",
-                         "pygenointerface.cpp",
-                         "pygenonlp.cpp",
-                         "lbfgsb.cpp",
-                         "lineSearch.cpp",
-                         "augmentedLagrangian.cpp"],
+                sources=[
+                    os.path.join("genosolver", "genointerface.pyx"),
+                    os.path.join("genosolver", "pygenointerface.cpp"),
+                    os.path.join("genosolver", "pygenonlp.cpp"),
+                    os.path.join("genosolver", "lbfgsb.cpp"),
+                    os.path.join("genosolver", "lineSearch.cpp"),
+                    os.path.join("genosolver", "augmentedLagrangian.cpp")],
                 language="c++",
                 # extra_compile_args=[compilerFlags],
-                include_dirs=['.',
-                              np.get_include(),
-                              # '..',
-                              eigenIncludeDir]
+                include_dirs=[np.get_include(),
+                              "genosolver",
+                              dir_eigen_inc]
                 )
-setup(name="genointerface",
+setup(name="genosolver",
+      packages=find_packages(),
       ext_modules=cythonize(ext))
