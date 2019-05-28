@@ -1,10 +1,11 @@
 # genosolver
 
-gensolver is the solver of the GENO (GENeric Optimization) framework. In order to use GENO, you need a working installation of genosolver.
+gensolver is the solver of the GENO (GENeric Optimization) framework. Using GENO requires a working installation of genosolver.
 
 ### Requirements
 - c++ compiler
 - python3
+- pip
 
 ### Installation via pip
 Clone and move to the genosolver repository:
@@ -38,7 +39,7 @@ min
    + c * sum(log(exp((-y) .* (X * w))
    + vector(1)))
 ```
-Enter this into the input field on http://geno4neurips.pythonanywhere.com/ and click "Download Solver". Once the download has finished, you can use the solver via 
+Enter this into the input field on http://geno4neurips.pythonanywhere.com/ and click the "Download Solver" button. Once the download has completed, you can use the solver via 
 
 ```sh
 python solver.py
