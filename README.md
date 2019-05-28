@@ -3,9 +3,14 @@
 gensolver is the official solver of the GENO (GENeric Optimization) framework. Using GENO requires a working installation of genosolver.
 
 ### Requirements
-- c++ compiler
 - python3
 - pip
+- c++ compiler that supports the  c++11 standard.
+
+The following c++ compiler and platform combinations were tested:
+##### Windows: TODO
+##### MAC: TODO
+##### Linux: TODO
 
 ### Installation via pip
 Clone and move to the genosolver repository:
