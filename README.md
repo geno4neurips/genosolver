@@ -1,6 +1,6 @@
 # genosolver
 
-gensolver is the solver of the GENO (GENeric Optimization) framework. Using GENO requires a working installation of genosolver.
+gensolver is the official solver of the GENO (GENeric Optimization) framework. Using GENO requires a working installation of genosolver.
 
 ### Requirements
 - c++ compiler
@@ -25,7 +25,7 @@ You can download a solver from the official geno4neurips website:
 
 #### Example - l2-regularized Logistic Regression
 
-The modeling a l2-regularized Logistic Regression can be done in the following way:
+Modeling a l2-regularized Logistic Regression can be achieved in the following way:
 
 ```
 parameters
