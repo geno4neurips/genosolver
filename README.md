@@ -26,7 +26,7 @@ python scripts/sample-02e.py
 ```
 
 ### Usage
-You can download a solver from the official geno4neurips website:
+**You can download a solver from the official geno4neurips website:**
   http://geno4neurips.pythonanywhere.com/
 
 #### Example - l2-regularized Logistic Regression
