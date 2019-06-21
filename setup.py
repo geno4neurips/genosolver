@@ -1,9 +1,6 @@
-# from distutils.core import setup, Extension
 from setuptools import setup, Extension, find_packages
 from Cython.Build import cythonize
 import numpy as np
-# import distutils.sysconfig
-# import platform
 import ssl
 import wget
 import os
@@ -23,10 +20,6 @@ else:
     # recommend to setup their own compilation script,
     # if this one fails
     raise Exception("OS not supported!")
-
-# Notes
-# clang works only with "-std=c++11"
-# what if we are on windows ???
 
 dir_eigen_include = os.path.join("genosolver", "eigen")
 url = "https://github.com/eigenteam/eigen-git-mirror/archive/3.3.7.zip"
@@ -56,7 +49,7 @@ ext = Extension(name="genosolver.genointerface",
                     os.path.join("genosolver", "lineSearch.cpp"),
                     os.path.join("genosolver", "augmentedLagrangian.cpp")],
                 language="c++",
-                extra_compile_args=["-std=c++11"],
+                extra_compile_args=["-std=c++11"],  # needed for clang
                 include_dirs=["genosolver",
                               np.get_include(),
                               dir_eigen_include]
@@ -73,41 +66,3 @@ setup(name="genosolver",
       python_requires=">3.7")
 
 os.remove(os.path.join("genosolver", "genointerface.cpp"))
-
-# # from distutils.core import setup, Extension
-# from setuptools import setup, Extension, find_packages
-# from Cython.Build import cythonize
-# import numpy as np
-# import os
-
-# # import distutils.sysconfig
-# # import platform
-
-# # dir_eigen_inc = os.path.join("genosolver", "eigen")
-
-
-# # os.chdir("genosolver")
-# ext = Extension("genosolver.genointerface",
-#                 sources=[
-#                     "genosolver/pygenointerface.cpp",
-#                     "genosolver/pygenonlp.cpp",
-#                     "genosolver/lbfgsb.cpp",
-#                     "genosolver/lineSearch.cpp",
-#                     "genosolver/augmentedLagrangian.cpp",
-#                     "genosolver/genointerface.pyx"],
-#                 language="c++",
-#                 # extra_compile_args=[compilerFlags],
-#                 include_dirs=[np.get_include(),
-#                               ".",
-#                               "genosolver/genosolver"
-#                               "genosolver/*"
-#                               "genosolver",
-#                               "genosolver/eigen"]
-#                 )
-# # os.chdir("..")
-# setup(name="genosolver",
-#       packages=find_packages(),
-#       ext_modules=cythonize(ext))
-
-
-# os.remove("genosolver/genointerface.cpp")

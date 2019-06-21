@@ -7,10 +7,11 @@ gensolver is the official solver of the GENO (GENeric Optimization) framework. U
 - pip
 - c++ compiler that supports the  c++11 standard.
 
-The following c++ compiler and platform combinations were tested:
-##### Windows: TODO
-##### MAC: TODO
-##### Linux: TODO
+Tested:
+- Linux: Ubuntu 16.04.5, kernel 4.15.0-46-generic, with g++7.4.0, clang++ 3.8.0
+- Windows: ...
+- MaxOS: ...
+
 
 ### Installation via pip
 Clone and move to the genosolver repository:
