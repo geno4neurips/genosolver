@@ -1,6 +1,8 @@
 # genosolver
 
-gensolver is the official solver of the GENO (GENeric Optimization) framework. Using GENO requires a working installation of genosolver.
+gensolver is the official solver of the GENO (GENeric Optimization) framework. Using GENO requires a working installation of genosolver. Solvers for your optimization problem can be obtained from the official geno4neurips website:
+
+  http://geno4neurips.pythonanywhere.com/
 
 ### Requirements
 - python3
@@ -8,9 +10,9 @@ gensolver is the official solver of the GENO (GENeric Optimization) framework. U
 - c++ compiler that supports the  c++11 standard.
 
 Tested:
-- Linux: Ubuntu 14/16/18 with g++7.4.0, clang++ 3.8.0
-- Windows: Windows 10 with MSVS 17/18/19
-- MaxOS: ...
+- **Linux**: Ubuntu 14/16/18 with anaconda python3.6/3.7 and g++7.4.0, clang++ 3.8.0
+- **Windows**: Windows 10 with with anaconda python3.6/3.7 and MSVS 17/18/19
+- **Mac**: macOS Mojave with anaconda python3.6/3.7 and clang++ 3.8
 
 
 ### Installation via pip
@@ -50,6 +52,12 @@ Enter this into the input field on http://geno4neurips.pythonanywhere.com/ and c
 ```sh
 python solver.py
 ````
+
+You can feed your own data into the solver by replacing the line:
+
+```python
+X, y = generateRandomData()
+```
 
 #### Example - Support Vector Machine
 
