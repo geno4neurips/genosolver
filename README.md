@@ -8,8 +8,8 @@ gensolver is the official solver of the GENO (GENeric Optimization) framework. U
 - c++ compiler that supports the  c++11 standard.
 
 Tested:
-- Linux: Ubuntu 16.04.5, kernel 4.15.0-46-generic, with g++7.4.0, clang++ 3.8.0
-- Windows: Windows 10 with MSVS 17 and MSVS 19
+- Linux: Ubuntu 14/16/18 with g++7.4.0, clang++ 3.8.0
+- Windows: Windows 10 with MSVS 17/18/19
 - MaxOS: ...
 
 
